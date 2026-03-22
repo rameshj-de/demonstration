@@ -1,18 +1,7 @@
-steps:
-  - name: "ubuntu"
-    script: |
-      #!/usr/bin/env bash
-      echo "Hello $_NAME"
+steps: 
+- name: 'ubuntu'
+  args: ['echo','Hello Ramesh']
 
-  - name: "ubuntu"
-    script: |
-      #!/usr/bin/env bash
-      echo "Your project id is: $PROJECT_ID"
-    automapSubstitutions: false
-
-substitutions:
-  _NAME: "John"
 
 options:
-  automapSubstitutions: true
   logging: CLOUD_LOGGING_ONLY
