@@ -1,11 +1,14 @@
 steps:
-- name: 'ubuntu'
-  entrypoint: 'bash'
-  args: 
-  - '-c'
-  - |
-    echo "hello world"
-    echo $TRIGGER_NAME
-    echo $BRANCH_NAME
+- name: "bash"
+  script: |
+    #!/usr/bin/env bash
+    echo "Hello World"
+
+- name: "python"
+  script: |
+    #!/usr/bin/env python
+    print("Hello World from python")
+
+
 options:
   logging: CLOUD_LOGGING_ONLY
