@@ -1,11 +1,18 @@
-steps: 
-- name: "bash"
-  script: |
-    #!/usr/bin/env bash
-    echo "Hello World" > dummy.txt
-    echo "Hello World Again" >> dummy.txt
-    echo "Opening dummy.txt"
-    cat dummy.txt
+steps:
+  - name: "ubuntu"
+    env: 
+      - "NAME=John"
+    script: |
+      #!/usr/bin/env bash
+      echo "Hello $NAME"
 
-options: 
+
+  - name: "ubuntu"
+    env:
+      - "PROJ_ID=$PROJECT_ID"
+    script: |
+      #!/usr/bin/env bash
+      echo "Your project id is: $PROJ_ID"
+
+options:
   logging: CLOUD_LOGGING_ONLY
