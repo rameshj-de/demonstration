@@ -5,10 +5,22 @@ steps:
 
 - name: 'ubuntu'
   args: ['echo', 'Hello from step-2']
-  waitFor: []
+  waitFor: ['step1']
+  id: 'step2'
 
 - name: 'ubuntu'
   args: ['echo', 'Hello from step-3']
+  waitFor: ['step1']
+  id: 'step3'
+
+- name: 'ubuntu'
+  args: ['echo', 'Hello from step-4']
+  waitFor: ['step2','step3']
+  id: 'step4'
+
+- name: 'ubuntu'
+  args: ['echo', 'Hello from step-5']
+  waitFor: ['step4']
 
 options:
   logging: CLOUD_LOGGING_ONLY
