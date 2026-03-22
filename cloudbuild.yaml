@@ -1,7 +1,9 @@
-steps: 
+steps:
 - name: 'ubuntu'
-  args: ['echo','Hello Ramesh']
+  args: ['echo','Hello from step-1']
 
+- name: 'ubuntu'
+  args: ['echo', 'Hello from step-2']
 
-options:
-  logging: CLOUD_LOGGING_ONLY
+- name: 'ubuntu'
+  args: ['echo', 'Hello from step-3']
