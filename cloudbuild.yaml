@@ -1,14 +1,8 @@
-steps:
+steps: 
 - name: "bash"
   script: |
-    #!/usr/bin/env bash
-    echo "Hello World"
-
-- name: "python"
-  script: |
-    #!/usr/bin/env python
-    print("Hello World from python")
-
-
-options:
-  logging: CLOUD_LOGGING_ONLY
+  #!/usr/bin/env bash
+  echo "Hello World" > dummy.txt
+  echo "Hello World Again" >> dummy.txt
+  echo "Opening dummy.txt"
+  cat dummy.txt
