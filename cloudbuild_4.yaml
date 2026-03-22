@@ -8,10 +8,10 @@ steps:
     script: |
       #!/usr/bin/env bash
       echo "Your project id is: $PROJECT_ID"
-    automapSubstitutions: true
 
 substitutions:
   _NAME: "John"
 
 options:
+  automapSubstitutions: true
   logging: CLOUD_LOGGING_ONLY
