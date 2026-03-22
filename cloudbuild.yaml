@@ -6,3 +6,6 @@ steps:
   echo "Hello World Again" >> dummy.txt
   echo "Opening dummy.txt"
   cat dummy.txt
+
+options: 
+  logging: CLOUD_LOGGING_ONLY
