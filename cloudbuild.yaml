@@ -4,10 +4,12 @@ steps:
 
 - name: 'ubuntu'
   args: ['sleep','20s']
-  timeout: 10s
+  
 
 - name: 'ubuntu'
   args: ['echo','Pipeline Ends']
+
+timeout: 10s
 
 options: 
   logging: CLOUD_LOGGING_ONLY
