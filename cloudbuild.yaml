@@ -7,6 +7,6 @@ steps:
     echo 'Hello World'
     echo $TRIGGER_NAME
     echo $BRANCH_NAME
-logsBucket: 'gs://build-logs-001'
+
 options:
-  logging: GCS_ONLY
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
