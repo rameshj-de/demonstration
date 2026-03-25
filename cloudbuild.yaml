@@ -1,15 +1,12 @@
 steps:
 - name: 'ubuntu'
-  args: ['echo','Pipeline Starts']
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - | 
+    echo 'Hello World'
+    echo $TRIGGER_NAME
+    echo $BRANCH_NAME
 
-- name: 'ubuntu'
-  args: ['sleep','20s']
-  
-
-- name: 'ubuntu'
-  args: ['echo','Pipeline Ends']
-
-timeout: 10s
-
-options: 
+options:
   logging: CLOUD_LOGGING_ONLY
